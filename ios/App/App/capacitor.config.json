@@ -1,0 +1,28 @@
+{
+	"appId": "com.whaletalk.app",
+	"appName": "鲸语",
+	"webDir": "web",
+	"bundledWebRuntime": false,
+	"server": {
+		"url": "https://chat.example.com",
+		"cleartext": false,
+		"androidScheme": "https",
+		"iosScheme": "capacitor",
+		"allowNavigation": []
+	},
+	"ios": {
+		"contentInset": "never",
+		"scrollEnabled": false,
+		"limitsNavigationsToAppBoundDomains": false,
+		"backgroundColor": "#04060c"
+	},
+	"backgroundColor": "#04060c",
+	"plugins": {
+		"SplashScreen": {
+			"launchShowDuration": 600,
+			"backgroundColor": "#eef5ff",
+			"showSpinner": false
+		}
+	},
+	"packageClassList": []
+}
