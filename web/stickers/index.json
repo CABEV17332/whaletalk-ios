@@ -1,0 +1,131 @@
+{
+ "pack": "鲸语内置",
+ "stickers": [
+  {
+   "name": "zaide",
+   "label": "在的",
+   "file": "/stickers/zaide.png",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "shuile",
+   "label": "睡了",
+   "file": "/stickers/shuile.png",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "ganfan",
+   "label": "干饭",
+   "file": "/stickers/ganfan.png",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "heng",
+   "label": "哼",
+   "file": "/stickers/heng.png",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "liwo",
+   "label": "理我",
+   "file": "/stickers/liwo.png",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "haoye",
+   "label": "好耶",
+   "file": "/stickers/haoye.png",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "xiangxiang",
+   "label": "想想",
+   "file": "/stickers/xiangxiang.png",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "popofang",
+   "label": "破防",
+   "file": "/stickers/popofang.png",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "maopao",
+   "label": "冒泡",
+   "file": "/stickers/maopao.png",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "wanan",
+   "label": "晚安",
+   "file": "/stickers/wanan.png",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "moyu",
+   "label": "摸鱼",
+   "file": "/stickers/moyu.png",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "baobao",
+   "label": "抱抱",
+   "file": "/stickers/baobao.png",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "wuliao",
+   "label": "无聊",
+   "file": "/stickers/wuliao.png",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "jiayou",
+   "label": "加油",
+   "file": "/stickers/jiayou.png",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "buyao",
+   "label": "不要",
+   "file": "/stickers/buyao.png",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "xiexie",
+   "label": "谢谢",
+   "file": "/stickers/xiexie.png",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "xiaosi",
+   "label": "笑死",
+   "file": "/stickers/xiaosi.png",
+   "width": 512,
+   "height": 512
+  },
+  {
+   "name": "dun",
+   "label": "蹲一个",
+   "file": "/stickers/dun.png",
+   "width": 512,
+   "height": 512
+  }
+ ]
+}
