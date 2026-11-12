@@ -1,0 +1,31 @@
+﻿{
+  "name": "whaletalk",
+  "version": "1.0.0",
+  "private": true,
+  "description": "鲸语 WhaleTalk — 与大肥鱼私聊的液态玻璃聊天室（零依赖 Node 后端）",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node server/index.mjs",
+    "dev": "node --watch server/index.mjs",
+    "test": "node --test tests/api.test.mjs",
+    "seed": "node tools/seed.mjs",
+    "bot": "node tools/dfy.mjs",
+    "ios:sync": "node scripts/ios-config.mjs && npx cap sync ios",
+    "ios:open": "npx cap open ios"
+  },
+  "keywords": [
+    "chat",
+    "liquid-glass",
+    "ios",
+    "whale"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@capacitor/cli": "^7.6.10",
+    "@capacitor/core": "^7.6.10",
+    "@capacitor/ios": "^7.6.10"
+  }
+}
