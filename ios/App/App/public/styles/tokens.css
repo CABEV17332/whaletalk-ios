@@ -1,0 +1,138 @@
+﻿/* ─────────────────────────────────────────────────────────────
+   鲸语 · 设计令牌
+   iOS 26 Liquid Glass：明亮的光、半透明的材质、克制的颜色
+   ───────────────────────────────────────────────────────────── */
+
+:root {
+  --font: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display',
+    'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    system-ui, sans-serif;
+
+  --ease: cubic-bezier(0.22, 0.9, 0.24, 1);
+  --spring: cubic-bezier(0.34, 1.46, 0.44, 1);
+  --spring-soft: cubic-bezier(0.3, 1.16, 0.4, 1);
+
+  --r-xs: 10px;
+  --r-sm: 14px;
+  --r-md: 18px;
+  --r-lg: 24px;
+  --r-xl: 30px;
+  --r-2xl: 38px;
+  --r-pill: 999px;
+
+  --gap: 12px;
+  --pad: 18px;
+
+  --safe-t: env(safe-area-inset-top, 0px);
+  --safe-b: env(safe-area-inset-bottom, 0px);
+  --safe-l: env(safe-area-inset-left, 0px);
+  --safe-r: env(safe-area-inset-right, 0px);
+
+  --glass-blur: 26px;
+  --glass-sat: 190%;
+  --glass-bright: 1.04;
+
+  --ink-rgb: 11 21 38;
+  --bg-base: #eef5ff;
+  --blob-1: #86c4ff;
+  --blob-2: #ffb9e0;
+  --blob-3: #9ef4dc;
+  --blob-4: #c3caff;
+
+  --ink: #0b1526;
+  --ink-2: rgb(11 21 38 / 0.6);
+  --ink-3: rgb(11 21 38 / 0.36);
+  --ink-4: rgb(11 21 38 / 0.16);
+
+  --glass-fill: rgb(255 255 255 / 0.44);
+  --glass-fill-strong: rgb(255 255 255 / 0.64);
+  --glass-fill-soft: rgb(255 255 255 / 0.26);
+  --glass-stroke: rgb(255 255 255 / 0.72);
+  --glass-stroke-soft: rgb(255 255 255 / 0.4);
+  --glass-hi: rgb(255 255 255 / 0.9);
+  --glass-lo: rgb(255 255 255 / 0.14);
+  --glass-shadow: 0 18px 40px -20px rgb(15 39 82 / 0.36), 0 2px 8px -3px rgb(15 39 82 / 0.14);
+  --glass-shadow-lg: 0 40px 80px -32px rgb(15 39 82 / 0.42), 0 8px 24px -12px rgb(15 39 82 / 0.2);
+  --inner-glow: inset 0 1px 0 var(--glass-hi), inset 0 -1px 0 var(--glass-lo);
+
+  --accent: #0a7cff;
+  --accent-2: #5b6bff;
+  --accent-hi: #56b4ff;
+  --accent-deep: #0a63e6;
+  --accent-soft: rgb(10 124 255 / 0.12);
+  --accent-glow: 0 12px 26px -12px rgb(10 124 255 / 0.72);
+  --grad-primary: linear-gradient(150deg, #63bcff 0%, #1e86ff 42%, #4c61ff 100%);
+
+  --danger: #ff3b30;
+  --success: #34c759;
+  --warn: #ff9f0a;
+
+  --bubble-in: rgb(255 255 255 / 0.72);
+  --bubble-in-stroke: rgb(255 255 255 / 0.86);
+  --bubble-in-ink: var(--ink);
+  --nav-glass: rgb(242 247 255 / 0.72);
+  --tab-glass: rgb(255 255 255 / 0.58);
+  --field-bg: rgb(255 255 255 / 0.5);
+
+  --hairline: rgb(10 22 40 / 0.075);
+  --hairline-strong: rgb(10 22 40 / 0.12);
+
+  --grain: 0.035;
+}
+
+:root[data-theme='dark'] {
+  --ink-rgb: 236 243 255;
+  --bg-base: #04060c;
+  --blob-1: #0f5a8f;
+  --blob-2: #7a2387;
+  --blob-3: #0a6f60;
+  --blob-4: #2b3188;
+
+  --ink: #f2f7ff;
+  --ink-2: rgb(238 245 255 / 0.66);
+  --ink-3: rgb(238 245 255 / 0.42);
+  --ink-4: rgb(238 245 255 / 0.2);
+
+  --glass-fill: rgb(30 40 60 / 0.42);
+  --glass-fill-strong: rgb(38 50 74 / 0.58);
+  --glass-fill-soft: rgb(22 30 46 / 0.32);
+  --glass-stroke: rgb(255 255 255 / 0.16);
+  --glass-stroke-soft: rgb(255 255 255 / 0.08);
+  --glass-hi: rgb(255 255 255 / 0.26);
+  --glass-lo: rgb(0 0 0 / 0.28);
+  --glass-shadow: 0 24px 50px -26px rgb(0 0 0 / 0.85), 0 2px 10px -4px rgb(0 0 0 / 0.5);
+  --glass-shadow-lg: 0 50px 100px -40px rgb(0 0 0 / 0.9), 0 10px 30px -18px rgb(0 0 0 / 0.6);
+
+  --accent: #37a3ff;
+  --accent-2: #7b8cff;
+  --accent-hi: #7dd0ff;
+  --accent-deep: #0a6fe0;
+  --accent-soft: rgb(55 163 255 / 0.16);
+  --accent-glow: 0 12px 30px -12px rgb(55 163 255 / 0.6);
+
+  --bubble-in: rgb(255 255 255 / 0.11);
+  --bubble-in-stroke: rgb(255 255 255 / 0.14);
+  --bubble-in-ink: #f2f7ff;
+  --nav-glass: rgb(9 13 22 / 0.66);
+  --tab-glass: rgb(28 36 54 / 0.56);
+  --field-bg: rgb(255 255 255 / 0.07);
+
+  --hairline: rgb(255 255 255 / 0.09);
+  --hairline-strong: rgb(255 255 255 / 0.16);
+
+  --grain: 0.05;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --spring: cubic-bezier(0.2, 0.9, 0.3, 1);
+    --spring-soft: cubic-bezier(0.2, 0.9, 0.3, 1);
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
