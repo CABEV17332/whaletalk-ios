@@ -1,0 +1,43 @@
+workflows:
+  ios-unsigned:
+    name: WhaleTalk unsigned IPA
+    instance_type: mac_mini_m2
+    max_build_duration: 60
+    environment:
+      node: 22
+      vars:
+        SERVER_URL: 'http://47.97.240.92'
+        APP_NAME: '鲸语'
+    scripts:
+      - name: Install dependencies
+        script: npm install --no-audit --no-fund
+      - name: Configure server URL
+        script: node scripts/ios-config.mjs --url "$SERVER_URL" --app-name "$APP_NAME"
+      - name: Copy web assets into iOS project
+        script: npx cap copy ios
+      - name: Build unsigned app
+        script: |
+          set -o pipefail
+          cd ios/App
+          xcodebuild \
+            -project App.xcodeproj \
+            -scheme App \
+            -configuration Release \
+            -sdk iphoneos \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            build | tail -n 80
+      - name: Package IPA
+        script: |
+          set -euo pipefail
+          cd ios/App
+          APP="build/Build/Products/Release-iphoneos/App.app"
+          test -d "$APP"
+          mkdir -p Payload
+          cp -R "$APP" Payload/
+          zip -qry WhaleTalk-unsigned.ipa Payload
+          ls -lh WhaleTalk-unsigned.ipa
+    artifacts:
+      - ios/App/WhaleTalk-unsigned.ipa
