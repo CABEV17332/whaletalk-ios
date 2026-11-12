@@ -1,0 +1,33 @@
+{
+  "name": "鲸语 · WhaleTalk",
+  "short_name": "鲸语",
+  "description": "和大肥鱼私聊的液态玻璃聊天室",
+  "lang": "zh-CN",
+  "start_url": "/#/chats",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait",
+  "background_color": "#eef5ff",
+  "theme_color": "#eef5ff",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
